@@ -1,0 +1,10 @@
+# mouse whell scrolling history
+set -g mouse on
+
+# 重新设置prefix key
+set -g prefix M-b                        # GNU-Screen compatible prefix
+set -g prefix2 C-b                        # GNU-Screen compatible prefix
+
+# 设置默认脚本
+set -g default-shell $('which zsh')
+
