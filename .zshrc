@@ -211,9 +211,6 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# export 这应该使用一个单独的文件来做
-export LDFLAGS="-L/usr/local/opt/qt/lib"
-export CPPFLAGS="-I/usr/local/opt/qt/include"
-export PATH="/usr/local/opt/qt/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
+source ~/dotfiles/zsh/zshrc.export
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
