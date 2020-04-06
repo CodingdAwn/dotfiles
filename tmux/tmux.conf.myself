@@ -8,3 +8,6 @@ set -g prefix2 C-a                       # GNU-Screen compatible prefix
 # 设置默认脚本
 #set -g default-shell /usr/local/bin/zsh
 
+
+# 使用默认的几个window启动
+source-file ~/dotfiles/tmux/custom.session

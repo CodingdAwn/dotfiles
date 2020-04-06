@@ -1,0 +1,8 @@
+# my custom session
+new-session -A -s "main" -n "main"
+# attach-session没有效果 
+attach-session -t "main"
+
+new-window -n "updating"
+new-window -n "scripts"
+selectw -t "main"

@@ -26,5 +26,5 @@ ln -s -f $dotfiles/.zshrc $home_dir/
 # 复制local配置到home
 cp -f $tmux_dir/.tmux.conf.local $home_dir/
 # 使用自己的conf
-echo "source-file $dot_file_dir/tmux.conf.myself" >> $home_dir/.tmux.conf.local
+echo "source-file $dot_file_dir/tmux/tmux.conf.myself" >> $home_dir/.tmux.conf.local
 
