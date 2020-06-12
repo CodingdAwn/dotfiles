@@ -212,5 +212,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 source ~/dotfiles/zsh/zshrc.export
+source ~/dotfiles/zsh/zshrc.alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
