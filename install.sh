@@ -22,7 +22,7 @@ tmux_github_url="https://github.com/gpakosz/.tmux.git"
 # 创建链接
 ln -s -f $tmux_dir/.tmux.conf $home_dir/
 ln -s -f $dotfiles/.vimrc $home_dir/
-ln -s -f $dotfiles/.zshrc $home_dir/
+ln -s -f $dotfiles/zsh/.zshrc $home_dir/
 # 复制local配置到home
 cp -f $tmux_dir/.tmux.conf.local $home_dir/
 # 使用自己的conf
