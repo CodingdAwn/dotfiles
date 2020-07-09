@@ -1,4 +1,8 @@
 # custom alias
 #
 
+# 显示 details for cp
 alias cp='cp -iv'
+
+# ranger to ra
+alias ra='ranger'
