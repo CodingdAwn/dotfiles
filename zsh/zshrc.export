@@ -23,3 +23,8 @@ if [ "$use_at" = "work_wsl" ]; then
   #export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
   #export PULSE_SERVER=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`
 fi
+
+if [ "$use_at" = "home_manjaro" ]; then
+  #export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
+  #export DISPLAY=192.168.1.1:0
+fi
