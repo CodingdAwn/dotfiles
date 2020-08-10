@@ -6,7 +6,7 @@ set -g prefix M-b                        # GNU-Screen compatible prefix
 set -g prefix2 C-a                       # GNU-Screen compatible prefix
 
 # 设置默认脚本
-#set -g default-shell /usr/local/bin/zsh
+#set -g default-shell /bin/zsh
 
 # tmux进入copy-mode后 可以使用vi的快捷键
 set-window-option -g mode-keys vi

@@ -26,8 +26,6 @@ if [ ! -f "$ANTIGEN" ]; then
 	mv "$TMPFILE" "$ANTIGEN"
 fi
 
-
-
 # Load local bash/zsh compatible settings
 _INIT_SH_NOFUN=1
 _INIT_SH_NOLOG=1
@@ -65,6 +63,8 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:editor' key-bindings 'emacs'
 zstyle ':prezto:module:git:alias' skip 'yes'
 zstyle ':prezto:module:prompt' theme 'adam2'
+#换了主题公司mac电脑 adam2主题加载有问题
+#zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:prompt' pwd-length 'short'
 zstyle ':prezto:module:terminal' auto-title 'yes'
 zstyle ':prezto:module:autosuggestions' color 'yes'
@@ -79,8 +79,7 @@ zstyle ':prezto:load' pmodule \
 	'history-substring-search' \
 	'autosuggestions' \
 	'prompt' \
-
-	# 'autosuggestions' \
+	'autosuggestions' \
 
 # Initialize prezto
 antigen use prezto
@@ -90,10 +89,10 @@ antigen use prezto
 antigen bundle rupa/z z.sh
 antigen bundle Vifon/deer
 antigen bundle zdharma/fast-syntax-highlighting
-# antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen bundle willghatch/zsh-cdr
-# antigen bundle zsh-users/zaw
+antigen bundle zsh-users/zaw
 
 # check login shell
 if [[ -o login ]]; then
