@@ -11,9 +11,7 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # go env config
 export GOPATH=$HOME/go
-#export GOROOT=/usr/local/Cellar/go/1.12.7/libexec
 export PATH=$GOPATH/bin:$PATH
-#export PATH=$PATH:$GOROOT/bin
 
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
 
