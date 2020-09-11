@@ -23,6 +23,8 @@ tmux_github_url="https://github.com/gpakosz/.tmux.git"
 ln -s -f $tmux_dir/.tmux.conf $home_dir/
 ln -s -f $dotfiles/.vimrc $home_dir/
 ln -s -f $dotfiles/zsh/.zshrc $home_dir/
+ln -s -f $dotfiles/yabai/.yabairc $home_dir/
+ln -s -f $dotfiles/yabai/.skhdrc $home_dir/
 # 复制local配置到home
 cp -f $tmux_dir/.tmux.conf.local $home_dir/
 # 使用自己的conf
