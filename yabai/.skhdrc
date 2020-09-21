@@ -154,16 +154,16 @@ cmd - return : open -n /Applications/iTerm.app
 cmd - g : open -n /Applications/Google\ Chrome.app
 
 # focus window(同一个空间切换窗口焦点)
-alt - h: yabai -m window --focus west
-alt - j: yabai -m window --focus south
-alt - k: yabai -m window --focus north
-alt - l: yabai -m window --focus east
+cmd - h: yabai -m window --focus west
+cmd - j: yabai -m window --focus south
+cmd - k: yabai -m window --focus north
+cmd - l: yabai -m window --focus east
 
 # swap window(同一个空间调整窗口位置)
-alt - left : yabai -m window --swap west
-alt - down : yabai -m window --swap south
-alt - up : yabai -m window --swap north
-alt - right : yabai -m window --swap east
+cmd - left : yabai -m window --swap west
+cmd - down : yabai -m window --swap south
+cmd - up : yabai -m window --swap north
+cmd - right : yabai -m window --swap east
 
 # move window
 # shift + cmd - h : yabai -m window --warp west
