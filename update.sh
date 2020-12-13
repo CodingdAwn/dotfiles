@@ -30,15 +30,15 @@ Pull()
 {
   cd $zshPath
   echo "current dir is $zshPath"
-  git pull
+  git pull --rebase
   
   cd $wikiPath
   echo "current dir is $wikiPath"
-  git pull
+  git pull --rebase
   
   cd $vimPath
   echo "current dir is $vimPath"
-  git pull
+  git pull --rebase
 }
 
 ##########################################
