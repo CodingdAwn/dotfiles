@@ -84,7 +84,6 @@ zstyle ':prezto:load' pmodule \
 # Initialize prezto
 antigen use prezto
 
-
 # default bundles
 antigen bundle rupa/z z.sh
 antigen bundle Vifon/deer
@@ -93,6 +92,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 antigen bundle willghatch/zsh-cdr
 antigen bundle zsh-users/zaw
+# forgit 一个更轻便 但交互友好的插件
+antigen bundle 'wfxr/forgit'
 
 # check login shell
 if [[ -o login ]]; then
