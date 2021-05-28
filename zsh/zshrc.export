@@ -11,17 +11,17 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # go env config
 export GOPATH=$HOME/go
+export PATH=$HOME/go/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
 
 # 测试 项目不使用go mod 故测试使用gopath
-#export GOPATH=$HOME/go/src
-export GOPATH=/mnt/d/work_new/mir-code/trunk/server/center:$GOPATH
+export GOPATH=$GOPATH:/mnt/d/work_new/mir-code/trunk/server/center
 #export GOPATH=/mnt/d/work_new/mir-code/trunk/server/center/src:$GOPATH
-export GOPATH=/mnt/d/global/trunk/server/gose:$GOPATH
-#export GOPATH=/mnt/d/global/trunk/server/gose/src/gose:$GOPATH
+export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose
+export GOPATH=$GOPATH:/mnt/d/work_new
+#export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose/src/gose
 #export GOPATH=/mnt/d/global/trunk/server/gose/src/github.com:$GOPATH
-
-export PATH=$GOPATH/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+#export GOPATH=$HOME/go/src:$GOPATH
 
 #export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7891
 # 如果使用wsl2的话用下面的
