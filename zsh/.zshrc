@@ -218,4 +218,3 @@ source ~/dotfiles/zsh/zshrc.export
 source ~/dotfiles/zsh/zshrc.alias
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
