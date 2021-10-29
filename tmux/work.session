@@ -1,9 +1,19 @@
 # my custom session
-new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-code/trunk/server/center/src" "nvim server/handler.go"
+# when exit vim this tmux window will exit too..
+# because window open with excute nvim
+# new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-code/trunk/server/center/src" "nvim server/handler.go"
+
+# 开始新的项目
+# new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-code/trunk/server/center/src"
+new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-v4/code/server/center/src"
+
 # attach-session没有效果 
 attach-session -t "main"
 
-new-window -n "wiki" "nvim"
+# when exit vim this tmux window will exit too..
+# because window open with excute nvim
+# new-window -n "wiki" "nvim"
+new-window -n "wiki"
 
 # 分割一下这个窗口
 new-window -n "scripts" -c "/mnt/d/work_new/mir-code/trunk/tools/ProtocolEditor"

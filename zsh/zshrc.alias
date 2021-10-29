@@ -6,3 +6,12 @@ alias cp='cp -iv'
 
 # ranger to ra
 alias ra='ranger'
+
+# ...
+uu () {
+  cd ../..
+}
+
+uuu () {
+  cd ../../..
+}

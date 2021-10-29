@@ -9,6 +9,9 @@ export CPPFLAGS="-I/usr/local/opt/qt/include"
 export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
+# python pip install directory
+#export PATH="/home/dawn/.local/bin"
+
 # go env config
 export GOPATH=$HOME/go
 export PATH=$HOME/go/bin:$PATH
@@ -35,9 +38,12 @@ fi
 
 if [ "$use_at" = "work_wsl2" ]; then
   # 测试 项目不使用go mod 故测试使用gopath
-  export GOPATH=$GOPATH:/mnt/d/work_new/mir-code/trunk/server/center
+  export GOPATH=$GOPATH:/mnt/d/work_new/mir-v4/code/server/center
+  #export GOPATH=$GOPATH:/mnt/d/work_new/mir-v4/code/server/scene
+  #export GOPATH=$GOPATH:/mnt/d/work_new/mir-code/trunk/server/center
   export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose
   export GOPATH=$GOPATH:/mnt/d/work_new
+  export GOPATH=$GOPATH:~/github_repo/grpc-go
 
   # 如果使用wsl2的话用下面的
   export https_proxy=http://172.16.10.193:7890 http_proxy=http://172.16.10.193:7890 all_proxy=socks5://172.16.10.193:7891
