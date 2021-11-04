@@ -1,4 +1,7 @@
-# dotfiles 1
-my dotfiles
-test bran g
-test master mod
+
+# my dotfiles
+
+- vim config
+- tmux config
+- zsh config
+- ranger config
