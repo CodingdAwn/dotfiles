@@ -22,6 +22,8 @@ attach-session -t "scene"
 # because window open with excute nvim
 # new-window -n "wiki" "nvim"
 new-window -n "wiki"
+send-keys -t "scene":"wiki" 'nvim' C-m
+send-keys -t "scene":"wiki" ' ww' C-m
 
 # 分割一下这个窗口
 new-window -n "scripts" -c "/mnt/d/work_new/mir-code/trunk/tools/ProtocolEditor"
