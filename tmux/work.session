@@ -37,3 +37,5 @@ splitw -v -p 50 -c "/mnt/d/work_new/mir-v4/products/game"
 
 new-window -n "temp" -c "/home/dawn"
 selectw -t "scene"
+
+set -g default-terminal "tmux-256color"
