@@ -8,7 +8,7 @@ export PATH="/usr/local/opt/qt/bin:$PATH"
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # go env config
-export GOPATH=$HOME/go/src
+export GOPATH=
 export PATH=$HOME/go/bin:$PATH
 export GO111MODULE=on
 
