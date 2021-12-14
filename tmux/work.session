@@ -2,13 +2,21 @@
 # when exit vim this tmux window will exit too..
 # because window open with excute nvim
 # new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-code/trunk/server/center/src" "nvim server/handler.go"
+# 应该使用send key打开vim就好了 todo 没试过呢
+new-session -A -s "center" -n "center" -c "/mnt/d/work_new/mir-v4/code/server/center/src" 
+send-keys -t "center" 'export GO111MODULE=off' C-m
+send-keys -t "center" 'export GOPATH=$GOPATH:/mnt/d/work_new/mir-v4/code/server/center' C-m
+send-keys -t "center" 'export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose' C-m
 
 # 开始新的项目
-# new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-code/trunk/server/center/src"
-new-session -A -s "main" -n "main" -c "/mnt/d/work_new/mir-v4/code/server/center/src"
+new-session -A -s "scene" -n "scene" -c "/mnt/d/work_new/mir-v4/code/server/scene/src" 
+send-keys -t "scene" 'export GO111MODULE=off' C-m
+send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/work_new/mir-v4/code/server/scene' C-m
+send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose' C-m
+send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/work_new/pkg' C-m
 
 # attach-session没有效果 
-attach-session -t "main"
+attach-session -t "scene"
 
 # when exit vim this tmux window will exit too..
 # because window open with excute nvim
@@ -18,12 +26,12 @@ new-window -n "wiki"
 # 分割一下这个窗口
 new-window -n "scripts" -c "/mnt/d/work_new/mir-code/trunk/tools/ProtocolEditor"
 
-splitw -h -p 50 -c "/mnt/d/work_new/mir-products/trunk/tools/TableExportTool"
-splitw -h -p 50 -c "/mnt/d/work_new/mir-code/trunk/tools/protogen"
-splitw -v -p 50 -c "/mnt/d/work_new/mir-products/trunk"
+splitw -h -p 50 -c "/mnt/d/work_new/mir-v4/products/game/server/center"
+splitw -h -p 50 -c "/mnt/d/work_new/mir-v4/products/game/server/center/gateway"
+splitw -v -p 50 -c "/mnt/d/work_new/mir-v4/products/game/server/scene"
 
 select-pane -t 2
-splitw -v -p 50 -c "/mnt/d/work_new/mir-products/trunk/tools/TxtToGo"
+splitw -v -p 50 -c "/mnt/d/work_new/mir-v4/products/game"
 
 new-window -n "temp" -c "/home/dawn"
-selectw -t "main"
+selectw -t "scene"
