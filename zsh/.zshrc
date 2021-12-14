@@ -92,8 +92,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 
 antigen bundle willghatch/zsh-cdr
 antigen bundle zsh-users/zaw
-# forgit 一个更轻便 但交互友好的插件
-antigen bundle 'wfxr/forgit'
 
 # check login shell
 if [[ -o login ]]; then

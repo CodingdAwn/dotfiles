@@ -1,5 +1,13 @@
 #!/bin/bash
 
+##################################################
+## TODO
+## 1. 考虑系统的问题 mac linux windows/wsl
+## 2. 考虑已安装的soft如何检测 可以在任何时候调用脚本 增量安装未安装的soft
+## 3. 解决一些bug 我记得只能在dotfiles目录执行此脚本 否则路径不对
+## 4. add soft [ ranger, lazygit ]
+##################################################
+
 # set path
 dot_file_dir=~/dotfiles
 home_dir=~/
@@ -23,6 +31,7 @@ tmux_github_url="https://github.com/gpakosz/.tmux.git"
 ln -s -f $tmux_dir/.tmux.conf $home_dir/
 ln -s -f $dotfiles/.vimrc $home_dir/
 ln -s -f $dotfiles/zsh/.zshrc $home_dir/
+# yabai只有在mac下使用 todo 考虑根据系统 单独做一些事情吧
 ln -s -f $dotfiles/yabai/.yabairc $home_dir/
 ln -s -f $dotfiles/yabai/.skhdrc $home_dir/
 # 复制local配置到home

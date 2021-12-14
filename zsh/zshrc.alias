@@ -7,6 +7,9 @@ alias cp='cp -iv'
 # ranger to ra
 alias ra='ranger'
 
+# lazygit
+alias lz='lazygit'
+
 # ...
 uu () {
   cd ../..
