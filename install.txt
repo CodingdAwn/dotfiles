@@ -1,0 +1,9 @@
+execute dir is: /home/dawn/dotfiles
+download dir is: /home/dawn/download
+ranger installed
+ripgrep installed
+lazygit installed
+neovim installed
+fzf installed
+gtags really exist
+ctags really exist

@@ -1,0 +1,8 @@
+install execute date: Thu Dec 16 11:39:04 CST 2021
+ranger: 1.9.3-1build1
+ripgrep: 11.0.2-1build1
+lazygit: 0.27.4-5~ubuntu20.04.1
+neovim: 0.6.0~ubuntu1+git202108241154-5d633546b-adeb5640f-9cb9a8f8c~ubuntu20.04.1
+fzf: 0.20.0-1
+gtags: 6.6.7
+ctags: 5.9.0
