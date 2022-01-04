@@ -5,6 +5,9 @@ set -g mouse on
 set -g prefix M-b                        # GNU-Screen compatible prefix
 set -g prefix2 C-a                       # GNU-Screen compatible prefix
 
+# kill pane
+bind x killp
+
 # 设置默认脚本
 #set -g default-shell /bin/zsh
 
