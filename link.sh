@@ -40,6 +40,7 @@ ln -s -f $dot_file_dir/.vimrc $home_dir/.vimrc
 ln -s -f $dot_file_dir/zsh/.zshrc $home_dir/.zshrc
 ln -s -f $dot_file_dir/ranger $config_dir/ranger
 ln -s -f $dot_file_dir/coc/coc-settings.json $config_dir/nvim/coc-settings.json
+ln -s -f $dot_file_dir/coc/ultisnips $config_dir/coc
 ln -s -f $dot_file_dir/nvim/init.vim $config_dir/nvim/init.vim
 ln -s -f $dot_file_dir/lazygit/config.yml $config_dir/lazygit/config.yml
 

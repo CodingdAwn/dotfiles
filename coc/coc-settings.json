@@ -9,5 +9,8 @@
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "gosnippets/UltiSnips"
-  ]
+  ],
+  "codeLens.enable": true,
+  "diagnostic.virtualText":true,
+  "diagnostic.virtualTextCurrentLineOnly":false
 }
