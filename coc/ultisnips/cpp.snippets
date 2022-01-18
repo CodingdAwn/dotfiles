@@ -28,9 +28,17 @@
 snippet cf "comment of function" b
 /*! \brief ${1:Brief function description here}
  *
- *  ${2:Detailed description}
+ *  ${5:Detailed description}
  *
- * \param ${3:Parameter description}
+ * \param ${2:Parameter name}: ${3:Parameter description}
  * \return ${4:Return parameter description}
+*/
+endsnippet
+
+# comment of class
+snippet cc "comment of class" b
+/*! \brief ${1:Brief class description here}
+ *
+ *  ${2:Detailed description}
 */
 endsnippet
