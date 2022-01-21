@@ -10,7 +10,14 @@
     "UltiSnips",
     "gosnippets/UltiSnips"
   ],
+//  "tsserver.log": "verbose",
   "codeLens.enable": true,
   "diagnostic.virtualText":true,
   "diagnostic.virtualTextCurrentLineOnly":false
+//  "javascript.implementationsCodeLens.enable": true,
+//  "typescript.implementationsCodeLens.enable": true,
+//  "javascript.referencesCodeLens.enable": true,
+//  "typescript.referencesCodeLens.enable": true,
+//  "javascript.referencesCodeLens.showOnAllFunctions": true,
+//  "typescript.referencesCodeLens.showOnAllFunctions": true
 }
