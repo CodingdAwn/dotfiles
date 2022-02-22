@@ -38,3 +38,7 @@ if [ "$use_at" = "work_wsl2" ]; then
   # 如果使用wsl2的话用下面的
   export https_proxy=http://172.16.10.193:7890 http_proxy=http://172.16.10.193:7890 all_proxy=socks5://172.16.10.193:7891
 fi
+
+if [ "$use_at" = "mac" ]; then
+  export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+fi
