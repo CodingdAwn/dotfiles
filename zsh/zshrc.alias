@@ -18,3 +18,7 @@ uu () {
 uuu () {
   cd ../../..
 }
+
+function cd () {
+  builtin cd "$@" && ls
+}

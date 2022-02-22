@@ -15,7 +15,6 @@ send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/work_new/mir-v4/code/server/s
 send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/global/trunk/server/gose' C-m
 send-keys -t "scene" 'export GOPATH=$GOPATH:/mnt/d/work_new/pkg' C-m
 
-# attach-session没有效果 
 attach-session -t "scene"
 
 # when exit vim this tmux window will exit too..
