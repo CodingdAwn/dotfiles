@@ -11,7 +11,8 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 export GOPATH=
 export PATH=$HOME/go/bin:$PATH
 export GO111MODULE=on
-
+# less的编码 在git diff时使用less 需要设置编码
+export LESSCHARSET=utf-8
 #echo $use_at
 if [ "$use_at" = "work_wsl" ]; then
   #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
@@ -36,7 +37,9 @@ if [ "$use_at" = "work_wsl2" ]; then
   # 这里还是默认使用go mod吧 
 
   # 如果使用wsl2的话用下面的
-  export https_proxy=http://172.16.10.193:7890 http_proxy=http://172.16.10.193:7890 all_proxy=socks5://172.16.10.193:7891
+  # need dlercloud enable LAN
+  proxy_ip=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
+  export https_proxy=http://$proxy_ip:7890 http_proxy=http://$proxy_ip:7890 all_proxy=socks5://$proxy_ip:7891
 fi
 
 if [ "$use_at" = "mac" ]; then

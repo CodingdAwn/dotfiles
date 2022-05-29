@@ -5,6 +5,6 @@ attach-session -t "main"
 
 new-window -n "updating"
 new-window -n "scripts"
-new-window -n "remote"
+new-window -n "wiki"
 
 selectw -t "main"

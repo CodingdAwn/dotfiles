@@ -33,6 +33,7 @@ rm -f "$home_dir/.skhdrc"
 
 #install .tmux
 [ ! -d "$github_repo_dir" ] && mkdir -p $github_repo_dir && git clone "$tmux_github_url" "$tmux_dir"
+[ ! -d "$config_dir" ] && mkdir -p $config_dir/coc
 
 # 创建链接
 ln -s -f $tmux_dir/.tmux.conf $home_dir/.tmux.conf
@@ -40,9 +41,11 @@ ln -s -f $dot_file_dir/.vimrc $home_dir/.vimrc
 ln -s -f $dot_file_dir/zsh/.zshrc $home_dir/.zshrc
 ln -s -f $dot_file_dir/ranger $config_dir/ranger
 ln -s -f $dot_file_dir/coc/coc-settings.json $config_dir/nvim/coc-settings.json
-ln -s -f $dot_file_dir/coc/ultisnips $config_dir/coc
 ln -s -f $dot_file_dir/nvim/init.vim $config_dir/nvim/init.vim
 ln -s -f $dot_file_dir/lazygit/config.yml $config_dir/lazygit/config.yml
+
+# copy 使用link可能会导致dotfiles目录添加了很多临时文件
+cp -rf $dot_file_dir/coc/ultisnips $config_dir/coc
 
 # yabai只有在mac下使用 todo 考虑根据系统 单独做一些事情吧
 ln -s -f $dot_file_dir/yabai/.yabairc $home_dir

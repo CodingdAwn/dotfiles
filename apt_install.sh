@@ -77,19 +77,22 @@ function Install_global() {
     return
   fi
   # install require package
-  sudo apt install automake autoconf gperf bison flex libtool libtool-bin libncurses-dev
+  apt install automake autoconf gperf bison flex libtool libtool-bin libncurses-dev -y
   # download global tar file
 
   name="global-6.6.7"
+  cd $download_dir
   if [[ ! -f ${download_dir}/global.tar.gz ]]
   then
-    cd $download_dir
     curl https://ftp.gnu.org/pub/gnu/global/${name}.tar.gz --output global.tar.gz
   fi
 
-  [ ! -d ${download_dir/global} ] && tar -xvzf global.tar.gz
+  if [[ ! -d ${download_dir}/global ]] 
+  then
+    tar -xvzf global.tar.gz
+  fi
 
-  cd ${download_dir}/global
+  cd ${download_dir}/${name}
   sh reconf.sh
   ./configure
   make
@@ -110,7 +113,12 @@ function Install_ctags() {
     return
   fi
 
-  [ ! -d ${download_dir}/ctags ] && git clone https://github.com/universal-ctags/ctags.git
+  if [[ ! -d ${download_dir}/ctags ]]
+  then
+    cd ${download_dir}
+    apt install pkg-config -y
+    git clone https://github.com/universal-ctags/ctags.git
+  fi
   cd ${download_dir}/ctags
   ./autogen.sh
   ./configure
