@@ -40,6 +40,7 @@ if [ "$use_at" = "work_wsl2" ]; then
   # need dlercloud enable LAN
   proxy_ip=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
   export https_proxy=http://$proxy_ip:7890 http_proxy=http://$proxy_ip:7890 all_proxy=socks5://$proxy_ip:7891
+  export PATH=$PATH:/usr/local/go/bin
 fi
 
 if [ "$use_at" = "mac" ]; then
