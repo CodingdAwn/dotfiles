@@ -1,13 +1,12 @@
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    // Add custom actions and keybindings to this array.
-    // To unbind a key combination from your defaults.json, set the command to "unbound".
-    // To learn more about actions and keybindings, visit https://aka.ms/terminal-keybindings
     "actions": 
     [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
+        {
+            "command": "paste",
+            "keys": "ctrl+shift+v"
+        },
         {
             "command": 
             {
@@ -17,23 +16,13 @@
             "keys": "ctrl+shift+c"
         },
         {
-            "command": "paste",
-            "keys": "ctrl+shift+v"
+            "command": "closePane",
+            "keys": "alt+shift+w"
         },
-        // Press Ctrl+Shift+F to open the search box
         {
             "command": "find",
             "keys": "ctrl+shift+f"
         },
-        // close pannel
-        {
-            "command": "closePane",
-            "keys": "alt+shift+w"
-        },
-        // Press Alt+Shift+D to open a new pane.
-        // - "split": "auto" makes this pane open in the direction that provides the most surface area.
-        // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
-        // To learn more about panes, visit https://aka.ms/terminal-panes
         {
             "command": 
             {
@@ -53,13 +42,11 @@
         "list": 
         [
             {
-                "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
@@ -71,14 +58,16 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "acrylicOpacity": 0.65000000000000002,
                 "backgroundImage": null,
                 "backgroundImageOpacity": 0.59999999999999998,
                 "backgroundImageStretchMode": "none",
                 "colorScheme": "Gruvbox Dark",
                 "cursorShape": "filledBox",
-                "fontFace": "Courier New",
-                "fontSize": 14,
+                "font": 
+                {
+                    "face": "等距更纱黑体 SC",
+                    "size": 15
+                },
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "historySize": 10000,
@@ -299,6 +288,29 @@
             "yellow": "#C4A000"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-20.04-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -321,5 +333,7 @@
             "white": "#C0C0C0",
             "yellow": "#808000"
         }
-    ]
+    ],
+    "theme": "dark",
+    "useAcrylicInTabRow": false
 }
