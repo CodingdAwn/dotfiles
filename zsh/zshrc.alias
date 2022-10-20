@@ -10,6 +10,10 @@ alias ra='ranger'
 # lazygit
 alias lz='lazygit'
 
+# just use neovim
+alias vim='nvim'
+alias vi='nvim'
+
 # ...
 uu () {
   cd ../..

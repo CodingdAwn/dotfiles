@@ -88,6 +88,7 @@ antigen use prezto
 antigen bundle rupa/z z.sh
 antigen bundle Vifon/deer
 antigen bundle zdharma/fast-syntax-highlighting
+#antigen use ohmyzsh/ohmyzsh
 antigen bundle zsh-users/zsh-autosuggestions
 
 antigen bundle willghatch/zsh-cdr
