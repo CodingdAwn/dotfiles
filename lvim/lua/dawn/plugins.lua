@@ -8,8 +8,8 @@ lvim.plugins = {
     { "vimwiki/vimwiki", init = function()
         require('dawn.configs.vimwiki')
     end },
-
+    -- colorscheme
     { "olimorris/onedarkpro.nvim", config = function()
-        vim.cmd("colorscheme onedark")
-    end }
+        require('dawn.configs.onedarkpro')
+    end },
 }

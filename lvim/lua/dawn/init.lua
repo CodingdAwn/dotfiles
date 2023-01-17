@@ -1,4 +1,4 @@
-print('load dawn init')
+print('load dawn init c')
 
 -- load plugins config
 reload('dawn.configs')
