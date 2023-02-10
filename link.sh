@@ -28,8 +28,8 @@ rm -f "$home_dir/.tmux.conf"
 rm -f "$home_dir/.tmux.conf.local"
 rm -f "$home_dir/.vimrc"
 rm -f "$home_dir/.zshrc"
-rm -f "$home_dir/.yabairc"
-rm -f "$home_dir/.skhdrc"
+#rm -f "$home_dir/.yabairc"
+#rm -f "$home_dir/.skhdrc"
 
 #install .tmux
 [ ! -d "$github_repo_dir" ] && mkdir -p $github_repo_dir && git clone "$tmux_github_url" "$tmux_dir"

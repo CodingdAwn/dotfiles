@@ -28,8 +28,7 @@ if [ "$use_at" = "work_wsl" ]; then
 fi
 
 if [ "$use_at" = "home_manjaro" ]; then
-  #export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
-  #export DISPLAY=192.168.1.1:0
+  export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 fi
 
 if [ "$use_at" = "work_wsl2" ]; then
