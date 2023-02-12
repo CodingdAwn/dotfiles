@@ -206,8 +206,8 @@ exec_always ~/.config/polybar/lanuch.sh &
 #exec --no-startup-id "Clash For Windows"
 exec --no-startup-id fcitx5 & #fcitx5 输入法
 exec_always feh --bg-scale --randomize ~/wallpaper # 设置壁纸
-#exec --no-startup-id dunst & # 桌面通知
-exec_always play-with-mpv
+exec_always dunst -conf ~/.config/dunst/dunstrc  # 桌面通知
+exec_always play-with-mpv 
 
 # auto tiling 
 exec_always --no-startup-id autotiling
