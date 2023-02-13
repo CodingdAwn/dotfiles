@@ -12,7 +12,8 @@ Run, komorebic.exe watch-configuration enable, , Hide
 Run, komorebic.exe work-area-offset 0 28 0 28, , Hide
 
 ; Open Yasb
-Run, python C:\Users\ASUS\.local\share\yasb\src\main.py, , Hide
+; 可以试试
+;Run, python C:\Users\ASUS\.local\share\yasb\src\main.py, , Hide
 
 ; Configure the invisible border dimensions
 Run, komorebic.exe invisible-borders 12 12 24 24, , Hide
@@ -76,6 +77,7 @@ Run, komorebic.exe float-rule exe ColorPickerUI.exe, , Hide
 ; Always manage forcibly these applications that don't automatically get picked up by komorebi
 ; Run, komorebic.exe manage-rule exe TIM.exe, , Hide
 ; Run, komorebic.exe manage-rule title 微信测试版 , Hide
+Run, komorebic.exe manage-rule exe WeChat.exe, , Hide
 
 ; Identify applications that close to the tray
 Run, komorebic.exe identify-tray-application exe Discord.exe, , Hide
@@ -87,17 +89,19 @@ Run, komorebic.exe identify-tray-application title uTools, , Hide
 Run, komorebic.exe identify-tray-application exe Telegram.exe, , Hide
 Run, komorebic.exe identify-tray-application exe Spotify.exe, , Hide
 Run, komorebic.exe identify-tray-application exe qbittorrent.exe, , Hide
+Run, komorebic.exe identify-tray-application exe mailmaster.exe, , Hide
+Run, komorebic.exe identify-tray-application exe Explorer.EXE, , Hide
 
 ; Identify applications that have overflowing borders
 Run, komorebic.exe identify-border-overflow exe Discord.exe, , Hide
 
 ; Start komorebi
-<#^s::
+<#+s::
 Run, komorebic.exe start, , Hide
 return
 
 ; Exit komorebi
-<#^q::
+<#+q::
 Run, komorebic.exe stop, , Hide
 return
 
