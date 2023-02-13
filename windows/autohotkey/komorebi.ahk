@@ -329,3 +329,8 @@ return
 <#Enter::
 Run, wt.exe
 return
+
+<#b::
+Run, chrome.exe
+return
+
