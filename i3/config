@@ -63,7 +63,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # chrome
-bindsym $mod+b exec --no-startup-id google-chrome-stable --proxy-server="http://127.0.0.1:7890"
+bindsym $mod+b exec --no-startup-id google-chrome-stable --proxy-server="http://127.0.0.1:7890" --high-dpi-support=1 --force-device-scale-factor=1.25
 
 # change focus
 bindsym $mod+j focus down
