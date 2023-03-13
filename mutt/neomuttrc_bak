@@ -1,0 +1,20 @@
+set folder=imaps://imap.gmail.com/
+
+set imap_authenticators="oauthbearer"
+
+set spoolfile=+INBOX
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+set from = "gaoxifengfordawn@gmail.com"
+set imap_user = "gaoxifengfordawn@gmail.com"
+
+#set realname = "dAwn_"
+#mailboxes "=Drafts" "=Sent" "=Trash"
+set sort=reverse-date
+
+set sidebar_visible
+set sidebar_format="%B%?F? [%F]?%* %?N?%N/?%S"
+
+set smtp_url = "smtp://$imap_user:$imap_pass@smtp.gmail.com:465"
