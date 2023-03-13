@@ -2,7 +2,3 @@ set folder=imaps://imap.gmail.com/
 set spoolfile=+INBOX
 set imap_user  = "gaoxifengfordawn@gmail.com"
 
-set imap_authenticators="oauthbearer"
-set imap_oauth_refresh_command="/home/dawn/.config/mutt/oauth2.py --quiet --user=gaoxifengfordawn@gmail.com\
-    --client_id=667504786488-7j2j037r04sa45raqghcj6i37q5imqjs.apps.googleusercontent.com --client_secret=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\
-    --refresh_token=1//0eI6KQ1g8aDBaCgYIARAAGA4SNwF-L9IraLPmvtrXSpdxaCsE8jdw9TWV-qwbQzY4gBblBdDLdBxoVw-YZPxEZUzFAXnDZ6-C-z4"
