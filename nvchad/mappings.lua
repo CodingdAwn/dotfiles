@@ -9,6 +9,7 @@ M.disabled = {
 		["<leader>h"] = "",
 		["<leader>v"] = "",
 		["<leader>q"] = "",
+		["<leader>b"] = "",
 	},
 
 	t = {
@@ -74,6 +75,33 @@ M.translator = {
 	v = {
 		["<leader>tw"] = { "<cmd>TranslateW<cr>", "translate current word", opts = { nowait = true } },
 		["<leader>tt"] = { "<cmd>Translate<cr>", "translate current word to status line", opts = { nowait = true } },
+	},
+}
+
+M.tabufline = {
+	n = {
+		["<leader>bl"] = {
+			function()
+				require("nvchad.tabufline").tabuflineNext()
+			end,
+			"Goto next buffer",
+		},
+
+		["<leader>bh"] = {
+			function()
+				require("nvchad.tabufline").tabuflinePrev()
+			end,
+			"Goto prev buffer",
+		},
+
+		["<leader>bc"] = {
+			function()
+				require("nvchad.tabufline").closeOtherBufs()
+			end,
+			"Close other buffers",
+		},
+
+    ["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
 	},
 }
 
