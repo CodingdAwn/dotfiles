@@ -101,7 +101,14 @@ M.tabufline = {
 			"Close other buffers",
 		},
 
-    ["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
+		["<leader>bn"] = { "<cmd> enew <CR>", "New buffer" },
+	},
+}
+
+M.doge = {
+	plugin = true,
+	n = {
+		["<leader>d"] = { "<cmd>DogeGenerate<cr>", "doge genertae document", opts = { nowait = true } },
 	},
 }
 

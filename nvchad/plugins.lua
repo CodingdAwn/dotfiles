@@ -7,7 +7,6 @@ vim.cmd("let g:vimwiki_global_ext = 0")
 local plugins = {
 
 	-- Override plugin definition options
-
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -76,13 +75,10 @@ local plugins = {
 		lazy = false,
 		config = function()
 			-- autocmd FileType wiki,vimwiki nnoremap <buffer> <leader>wd :VimwikiToggleListItem<CR>
-			vim.api.nvim_create_autocmd(
-				"FileType",
-				{
-					pattern = { "wiki", "vimwiki" },
-					command = [[nnoremap <buffer> <leader>wd :VimwikiToggleListItem<CR>]],
-				}
-			)
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = { "wiki", "vimwiki" },
+				command = [[nnoremap <buffer> <leader>wd :VimwikiToggleListItem<CR>]],
+			})
 		end,
 	},
 
@@ -127,6 +123,22 @@ local plugins = {
 		lazy = false,
 		config = function()
 			require("custom.configs.alpha")
+		end,
+	},
+
+	-- vim-doge generator comment
+	{
+		"kkoomen/vim-doge",
+        lazy = false,
+		cmd = { "DogeGenerate" },
+
+		build = function()
+			vim.fn["doge#install"]()
+		end,
+		init = function()
+			require("core.utils").load_mappings("doge")
+			vim.g.doge_doc_standard_cs = "xmldoc"
+			vim.g.doge_doc_standard_lua = "ldoc"
 		end,
 	},
 }
