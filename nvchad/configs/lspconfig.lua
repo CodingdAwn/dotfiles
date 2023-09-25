@@ -25,6 +25,7 @@ lspconfig.csharp_ls.setup {
 }
 ]]
 
+-- c# lsp config
 require'lspconfig'.omnisharp.setup {
     on_attach = on_attach,
     capabilities = capabilities,

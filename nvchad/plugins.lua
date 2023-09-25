@@ -1,8 +1,5 @@
 local overrides = require("custom.configs.overrides")
 
-vim.cmd("let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
-vim.cmd("let g:vimwiki_global_ext = 0")
-
 ---@type NvPluginSpec[]
 local plugins = {
 
@@ -72,7 +69,13 @@ local plugins = {
 	-- wiki
 	{
 		"vimwiki/vimwiki",
-		lazy = false,
+		keys = {
+			{ "<leader>ww", "<cmd>VimwikiIndex<cr>", mode = "n", desc = "vim wiki" },
+		},
+		init = function()
+			vim.cmd("let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
+			vim.cmd("let g:vimwiki_global_ext = 0")
+		end,
 		config = function()
 			-- autocmd FileType wiki,vimwiki nnoremap <buffer> <leader>wd :VimwikiToggleListItem<CR>
 			vim.api.nvim_create_autocmd("FileType", {
@@ -129,16 +132,18 @@ local plugins = {
 	-- vim-doge generator comment
 	{
 		"kkoomen/vim-doge",
-        lazy = false,
-		cmd = { "DogeGenerate" },
-
+		keys = {
+			{ "<leader>d", "<cmd>DogeGenerate<cr>", mode = "n", desc = "vim-doge generate document" },
+		},
 		build = function()
 			vim.fn["doge#install"]()
 		end,
 		init = function()
 			require("core.utils").load_mappings("doge")
-			vim.g.doge_doc_standard_cs = "xmldoc"
-			vim.g.doge_doc_standard_lua = "ldoc"
+		end,
+		config = function()
+			-- TODO lazy load wasn't source ftpplugin, so i'm do a trick here
+			vim.cmd("filetype detect")
 		end,
 	},
 }

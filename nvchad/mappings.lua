@@ -54,11 +54,13 @@ M.nvimtree = {
 	},
 }
 
+--[[
 M.vimwiki = {
 	n = {
 		["<leader>ww"] = { "<cmd>VimwikiIndex<cr>", "index for vimwiki" },
 	},
 }
+--]]
 
 M.alpha = {
 	n = {
@@ -107,9 +109,10 @@ M.tabufline = {
 
 M.doge = {
 	plugin = true,
+    --[[
 	n = {
 		["<leader>d"] = { "<cmd>DogeGenerate<cr>", "doge genertae document", opts = { nowait = true } },
 	},
+    --]]
 }
-
 return M
