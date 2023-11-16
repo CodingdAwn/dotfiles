@@ -146,6 +146,11 @@ local plugins = {
 			vim.cmd("filetype detect")
 		end,
 	},
+
+    -- notify plugin
+    {
+        'rcarriga/nvim-notify',
+    }
 }
 
 return plugins
