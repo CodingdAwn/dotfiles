@@ -68,5 +68,12 @@ require'lspconfig'.omnisharp.setup {
     analyze_open_documents_only = false,
 }
 
+-- go lsp config
+require'lspconfig'.gopls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { "gopls" }
+}
+
 -- 
 -- lspconfig.pyright.setup { blabla}
