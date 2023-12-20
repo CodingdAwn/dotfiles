@@ -44,6 +44,32 @@ M.lsp = {
 			end,
 			"Diagnostic setloclist",
 		},
+		["<leader>aa"] = {
+			function()
+                if (vim.bo.ft == "cpp" or vim.bo.ft == "c") then
+                    vim.cmd("ClangdSwitchSourceHeader ")
+                end
+			end,
+			"switch header source with clangd",
+		},
+		["<leader>ah"] = {
+			function()
+                if (vim.bo.ft == "cpp" or vim.bo.ft == "c") then
+                    vim.cmd("split")
+                    vim.cmd("ClangdSwitchSourceHeader ")
+                end
+			end,
+			"switch header source with clangd",
+		},
+		["<leader>av"] = {
+			function()
+                if (vim.bo.ft == "cpp" or vim.bo.ft == "c") then
+                    vim.cmd("vsplit")
+                    vim.cmd("ClangdSwitchSourceHeader ")
+                end
+			end,
+			"switch header source with clangd",
+		},
 	},
 }
 
@@ -53,14 +79,6 @@ M.nvimtree = {
 		["g?"] = { "lua require('nvim-tree.api').tree.toggle_help", "nvimtree Help" },
 	},
 }
-
---[[
-M.vimwiki = {
-	n = {
-		["<leader>ww"] = { "<cmd>VimwikiIndex<cr>", "index for vimwiki" },
-	},
-}
---]]
 
 M.alpha = {
 	n = {
@@ -107,12 +125,4 @@ M.tabufline = {
 	},
 }
 
-M.doge = {
-	plugin = true,
-    --[[
-	n = {
-		["<leader>d"] = { "<cmd>DogeGenerate<cr>", "doge genertae document", opts = { nowait = true } },
-	},
-    --]]
-}
 return M

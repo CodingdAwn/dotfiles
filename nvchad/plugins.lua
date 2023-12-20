@@ -138,9 +138,6 @@ local plugins = {
 		build = function()
 			vim.fn["doge#install"]()
 		end,
-		init = function()
-			require("core.utils").load_mappings("doge")
-		end,
 		config = function()
 			-- TODO lazy load wasn't source ftpplugin, so i'm do a trick here
 			vim.cmd("filetype detect")

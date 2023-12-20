@@ -5,6 +5,8 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+--
+require "custom.autocmds"
 
 vim.opt.relativenumber = true
 -- 禁用交换文件
@@ -26,15 +28,4 @@ vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 
-vim.api.nvim_create_autocmd('BufRead', {
-    desc = 'set python tab config',
-    group = vim.api.nvim_create_augroup('pythontab', { clear = true }),
-    callback = function(opts)
-        if vim.bo[opts.buf].filetype == 'python' then
-            vim.opt_local.sw = 4
-            vim.opt_local.ts = 4
-            vim.opt_local.expandtab = false
-        end
-    end,
-})
 
