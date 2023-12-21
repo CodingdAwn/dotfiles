@@ -33,6 +33,26 @@ M.general = {
 
 		-- close window
 		["<leader>q"] = { "<cmd>q<cr>", "close window", opts = { nowait = true } },
+
+        -- increase width for windows
+        ["<leader>wl"] = { function ()
+            local width = vim.fn.winwidth(0)
+            if (width <= 50) then
+                vim.api.nvim_win_set_width(0, width + 10)
+            else
+                vim.api.nvim_win_set_width(0, width + width * 0.1)
+            end
+        end, "increase width", opts = { nowait = true } },
+
+        -- decrease width for windows
+        ["<leader>wh"] = { function ()
+            local width = vim.fn.winwidth(0)
+            if (width <= 50) then
+                vim.api.nvim_win_set_width(0, width - 10)
+            else
+                vim.api.nvim_win_set_width(0, width - width * 0.1)
+            end
+        end, "increase width", opts = { nowait = true } },
 	},
 }
 
