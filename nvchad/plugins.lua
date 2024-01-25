@@ -132,6 +132,7 @@ local plugins = {
 	-- vim-doge generator comment
 	{
 		"kkoomen/vim-doge",
+        --tag = "v4.5.0",
 		keys = {
 			{ "<leader>d", "<cmd>DogeGenerate<cr>", mode = "n", desc = "vim-doge generate document" },
 		},
@@ -144,10 +145,18 @@ local plugins = {
 		end,
 	},
 
-    -- notify plugin
-    {
-        'rcarriga/nvim-notify',
-    }
+	-- notify plugin
+	{
+		"rcarriga/nvim-notify",
+	},
+
+	-- debugger
+	{
+        "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" },
+        config = function ()
+            require("custom.configs.dap")
+        end
+    },
 }
 
 return plugins
