@@ -132,7 +132,7 @@ local plugins = {
 	-- vim-doge generator comment
 	{
 		"kkoomen/vim-doge",
-        --tag = "v4.5.0",
+		--tag = "v4.5.0",
 		keys = {
 			{ "<leader>d", "<cmd>DogeGenerate<cr>", mode = "n", desc = "vim-doge generate document" },
 		},
@@ -152,11 +152,28 @@ local plugins = {
 
 	-- debugger
 	{
-        "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" },
-        config = function ()
-            require("custom.configs.dap")
-        end
-    },
+		"rcarriga/nvim-dap-ui",
+		requires = { "mfussenegger/nvim-dap" },
+		config = function()
+			require("custom.configs.dap")
+		end,
+	},
+
+	{
+		"kylechui/nvim-surround",
+		version = "*", -- Use for stability; omit to use `main` branch for the latest features
+		event = "VeryLazy",
+		config = function()
+			require("nvim-surround").setup({
+				-- Configuration here, or leave empty to use defaults
+			})
+		end,
+	},
+
+	{
+		"sindrets/diffview.nvim",
+		event = "VeryLazy",
+	},
 }
 
 return plugins
