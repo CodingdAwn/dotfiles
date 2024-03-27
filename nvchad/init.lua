@@ -28,3 +28,4 @@ vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
 
+vim.opt.fileencodings = "ucs-bom,utf-8,gbk,latin1"
