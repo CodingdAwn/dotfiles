@@ -44,9 +44,6 @@ ln -s -f $dot_file_dir/ranger $config_dir/ranger
 #ln -s -f $dot_file_dir/nvim $config_dir/
 ln -s -f $dot_file_dir/lazygit/config.yml $config_dir/lazygit/config.yml
 
-# copy 使用link可能会导致dotfiles目录添加了很多临时文件
-#cp -rf $dot_file_dir/coc/ultisnips $config_dir/coc
-
 # yabai只有在mac下使用 todo 考虑根据系统 单独做一些事情吧
 #ln -s -f $dot_file_dir/yabai/.yabairc $home_dir
 #ln -s -f $dot_file_dir/yabai/.skhdrc $home_dir
