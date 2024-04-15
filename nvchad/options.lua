@@ -1,12 +1,9 @@
--- local autocmd = vim.api.nvim_create_autocmd
+require "nvchad.options"
 
--- Auto resize panes when resizing nvim window
--- autocmd("VimResized", {
---   pattern = "*",
---   command = "tabdo wincmd =",
--- })
---
-require "custom.autocmds"
+-- add yours here!
+
+-- local o = vim.o
+-- o.cursorlineopt ='both' -- to enable cursorline!
 
 vim.opt.relativenumber = true
 -- 禁用交换文件

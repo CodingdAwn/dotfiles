@@ -1,29 +1,18 @@
-local on_attach = require("plugins.configs.lspconfig").on_attach
-local capabilities = require("plugins.configs.lspconfig").capabilities
+local on_attach = require("nvchad.configs.lspconfig").on_attach
+local on_init = require("nvchad.configs.lspconfig").on_init
+local capabilities = require("nvchad.configs.lspconfig").capabilities
 
 local lspconfig = require "lspconfig"
+local servers = { "html", "cssls", "clangd", "vimls" }
 
--- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "vimls" }
-
+-- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
+    on_init = on_init,
     capabilities = capabilities,
   }
 end
-
---[[
-lspconfig.csharp_ls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { "csharp-ls" },
-  filetypes = { "cs" },
-  root_dir = function (startpath)
-    return lspconfig.util.root_pattern("*.sln")(startpath)
-  end,
-}
-]]
 
 -- c# lsp config
 require'lspconfig'.omnisharp.setup {
@@ -74,6 +63,3 @@ require'lspconfig'.gopls.setup {
     capabilities = capabilities,
     cmd = { "gopls" }
 }
-
--- 
--- lspconfig.pyright.setup { blabla}

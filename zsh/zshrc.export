@@ -13,6 +13,11 @@ export PATH=$HOME/go/bin:$PATH
 export GO111MODULE=on
 # less的编码 在git diff时使用less 需要设置编码
 export LESSCHARSET=utf-8
+
+# dotnet relative
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+
 #echo $use_at
 if [ "$use_at" = "work_wsl" ]; then
   #export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0

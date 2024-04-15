@@ -1,7 +1,6 @@
-install execute date: Fri May 27 10:08:20 CST 2022
-ranger: 1.9.3-1build1
-ripgrep: 11.0.2-1build1
-lazygit: 0.27.4-5~ubuntu20.04.1
-neovim: 0.7.0~ubuntu1+git202204251551-440b65c33-dd05b3569-2af62ee07~ubuntu20.04.1
-fzf: 0.20.0-1
-gtags: 6.6.7
+install execute date: Wed Mar 27 18:06:08 CST 2024
+ranger: 1.9.3-3ubuntu1
+ripgrep: 13.0.0-2ubuntu0.1
+
+neovim: 0.7.2-3~bpo22.04.1~ppa1
+fzf: 0.29.0-1
