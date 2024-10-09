@@ -43,7 +43,10 @@ if [ "$use_at" = "work_wsl2" ]; then
   # 如果使用wsl2的话用下面的
   # need dlercloud enable LAN
   proxy_ip=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
-  export https_proxy=http://$proxy_ip:7890 http_proxy=http://$proxy_ip:7890 all_proxy=socks5://$proxy_ip:7891
+
+
+  # 现在可以使用在windows下添加一个.wslconfig文件来实现代理 不需要这样了
+  #export https_proxy=http://$proxy_ip:7890 http_proxy=http://$proxy_ip:7890 all_proxy=socks5://$proxy_ip:7891
   export PATH=$PATH:/usr/local/go/bin
 fi
 
