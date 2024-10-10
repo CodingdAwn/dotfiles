@@ -3,14 +3,14 @@
 # default editor
 export VISUAL=nvim
 export EDITOR=nvim
-export PATH=$HOME/.local/bin:$PATH
-export PATH="/usr/local/opt/qt/bin:$PATH"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
+export PATH=$PATH:$HOME/.local/bin
+#export PATH="/usr/local/opt/qt/bin:$PATH"
+#export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # go env config
-export GOPATH=
-export PATH=$HOME/go/bin:$PATH
-export GO111MODULE=on
+#export GOPATH=
+#export PATH=$PATH:/usr/local/go/bin
+#export GO111MODULE=on
 # less的编码 在git diff时使用less 需要设置编码
 export LESSCHARSET=utf-8
 
