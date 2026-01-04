@@ -4,7 +4,6 @@ local nomap = vim.keymap.del
 nomap("n", "<A-h>")
 nomap("n", "<A-v>")
 nomap("n", "<leader>h")
-nomap("n", "<leader>q")
 nomap("n", "<leader>b")
 nomap("n", "<leader>fm")
 
@@ -53,21 +52,21 @@ end, { desc = "decrease width" })
 -- clang lsp
 map("n", "<leader>aa", function()
   if vim.bo.ft == "cpp" or vim.bo.ft == "c" then
-    vim.cmd "ClangdSwitchSourceHeader "
+    vim.cmd "LspClangdSwitchSourceHeader "
   end
 end, { desc = "switch header source with clangd" })
 
 map("n", "<leader>ah", function()
   if vim.bo.ft == "cpp" or vim.bo.ft == "c" then
     vim.cmd "split"
-    vim.cmd "ClangdSwitchSourceHeader "
+    vim.cmd "LspClangdSwitchSourceHeader "
   end
 end, { desc = "switch header source with clangd" })
 
 map("n", "<leader>av", function()
   if vim.bo.ft == "cpp" or vim.bo.ft == "c" then
     vim.cmd "vsplit"
-    vim.cmd "ClangdSwitchSourceHeader "
+    vim.cmd "LspClangdSwitchSourceHeader "
   end
 end, { desc = "switch header source with clangd" })
 
