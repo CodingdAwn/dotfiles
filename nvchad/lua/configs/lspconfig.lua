@@ -18,5 +18,26 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end,
 })
 
-local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright" }
+--Enable (broadcasting) snippet capability for completion
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = false
+
+vim.lsp.config('neocmake', {
+    capabilities = capabilities,
+    cmd = { "neocmakelsp", "stdio" },
+    filetypes = { "cmake" },
+    root_markers = { ".git", "build", "cmake" },
+    single_file_support = true, -- suggested
+    init_options = {
+        format = {
+            enable = true
+        },
+        lint = {
+            enable = true
+        },
+        scan_cmake_in_package = true -- default is true
+    }
+})
+
+local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake" }
 vim.lsp.enable(servers)

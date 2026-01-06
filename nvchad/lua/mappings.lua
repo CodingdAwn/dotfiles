@@ -6,6 +6,7 @@ nomap("n", "<A-v>")
 nomap("n", "<leader>h")
 nomap("n", "<leader>b")
 nomap("n", "<leader>fm")
+nomap("n", "<leader>e")
 
 nomap("t", "<A-h>")
 nomap("t", "<A-v>")
@@ -25,6 +26,10 @@ end, { desc = "toggle transparency" })
 map("n", "<leader>fm", function()
   vim.lsp.buf.format { async = true }
 end, { desc = "format file" })
+
+map("n", "<leader>e", function()
+    require("nvim-tree.api").tree.toggle()
+end, { desc = "toggle nvimtree" })
 
 -- close window
 map("n", "<leader>q", "<cmd>q<cr>", { desc = "close window" })
