@@ -39,5 +39,5 @@ vim.lsp.config('neocmake', {
     }
 })
 
-local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake" }
+local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright" }
 vim.lsp.enable(servers)
