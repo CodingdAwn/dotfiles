@@ -11,5 +11,6 @@ function grep     ; command grep --color=auto $argv ; end
 abbr mv 'mv -v'
 abbr rm 'rm -v'
 abbr cp 'cp -v'
+abbr ll 'll -a'
 
 abbr cc 'clear'
