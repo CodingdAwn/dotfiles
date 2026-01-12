@@ -14,11 +14,14 @@ vim.opt.sw = 2
 -- 设置 TAB 宽度
 vim.opt.ts = 2
 
+-- 如果后面设置了 expandtab 那么展开 tab 为多少字符
+vim.opt.softtabstop = 2
+
 -- 使用空格代替tab
 vim.opt.expandtab = true
 
--- 如果后面设置了 expandtab 那么展开 tab 为多少字符
-vim.opt.softtabstop = 2
+vim.opt.autoindent = true
+vim.opt.smartindent = true
 
 vim.cmd('syntax on')
 vim.cmd('filetype plugin on')
