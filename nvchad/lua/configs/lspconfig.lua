@@ -53,5 +53,16 @@ vim.lsp.config('neocmake', {
   }
 })
 
+-- for cpp
+vim.lsp.config('clangd', {
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    -- Add the path to your compiler here (matching the one in compile_commands.json)
+    "--query-driver=/usr/bin/c++,/usr/bin/clang++,/usr/bin/g++"
+  },
+})
+
 local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright" }
 vim.lsp.enable(servers)
