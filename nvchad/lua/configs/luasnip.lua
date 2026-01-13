@@ -8,6 +8,7 @@ loader.lazy_load({
     paths = { vim.fn.expand("~/.config/nvim/my_snippets") }
 })
 
+-- 直接在这里定义snip是因为date使用json日期有问题，直接在这里调用lua放便且没问题
 local ls = require("luasnip")
 local s = ls.snippet
 local i = ls.insert_node
@@ -48,4 +49,70 @@ ls.add_snippets("cpp", {
         i(3, "https://leetcode-cn.com/problems/"),
         i(0) -- 光标最后停留的位置
     }))
+})
+
+local cmp = require('cmp')
+local luasnip = require('luasnip')
+
+-- 1. 配置 Luasnip (防止跳转历史残留)
+luasnip.config.set_config({
+  region_check_events = 'InsertEnter', -- 重新进入插入模式时检查区域
+  delete_check_events = 'InsertLeave', -- 离开插入模式时清除不需要的 Snippet 节点
+})
+
+-- 2. 配置 nvim-cmp
+cmp.setup({
+  mapping = {
+    -- 【补全逻辑】
+    -- Tab 仅用于菜单选择
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback() -- 正常的 Tab 缩进
+      end
+    end, { 'i', 's' }),
+
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+
+    -- 【Snippet 跳转逻辑】
+    -- 使用 Ctrl + l 跳转到下一个参数位 (Forward)
+    ['<C-l>'] = cmp.mapping(function(fallback)
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+
+    -- 使用 Ctrl + h 跳转到上一个参数位 (Backward)
+    ['<C-h>'] = cmp.mapping(function(fallback)
+      if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+
+    -- 回车直接确认补全
+    ['<CR>'] = cmp.mapping.confirm({
+      select = true,
+      behavior = cmp.ConfirmBehavior.Replace,
+    }),
+  },
+  
+  -- 必须指定 snippet 引擎
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  
+  -- 其他 cmp 设置...
 })
