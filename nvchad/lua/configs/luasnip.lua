@@ -8,7 +8,9 @@ loader.lazy_load({
     paths = { vim.fn.expand("~/.config/nvim/my_snippets") }
 })
 
--- 直接在这里定义snip是因为date使用json日期有问题，直接在这里调用lua放便且没问题
+-- 直接在这里定义snip是因为date，
+-- 上面的方式是定义json，使用一些默认函数，但是最终生成的date有问题
+-- 这里直接调用lua更准确方便
 local ls = require("luasnip")
 local s = ls.snippet
 local i = ls.insert_node
@@ -36,9 +38,7 @@ ls.add_snippets("cpp", {
          * Date    : {}
          * Purposes: {}-{}
          * {}
-         */
-
-        using namespace std;
+        */
 
         {}
     ]], {
