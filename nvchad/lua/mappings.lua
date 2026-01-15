@@ -33,6 +33,8 @@ end, { desc = "toggle nvimtree" })
 
 -- close window
 map("n", "<leader>q", "<cmd>q<cr>", { desc = "close window" })
+map("n", "<leader>cq", "<cmd>ccl<cr>", { desc = "close quickfix window" })
+map("n", "<leader>cl", "<cmd>lcl<cr>", { desc = "close locallist window" })
 
 -- increase width for windows
 map("n", "<leader>wl", function()
