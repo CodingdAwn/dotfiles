@@ -1,54 +1,72 @@
 #! /bin/bash
 
-##################################################
-## TODO
-## 1. done! 考虑已安装的soft如何检测 可以在任何时候调用脚本 增量安装未安装的soft
-## 2. done! 解决一些bug 我记得只能在dotfiles目录执行此脚本 否则路径不对 -> 未测试
-## 3. done! ln有的应该直接连接dir 如ranger 
-## 4. done! 链接nvim的配置init.vim 链接coc-setting的配置到同样的目录
-## 5. done! 安装完成后 把所有soft的version打印出来 输出到一个文件中 dpkg -s name | grep Version
-##################################################
-
 # set path
-dot_file_dir=~/dotfiles
+dot_file_dir=$(cd "$(dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 config_dir=~/.config
-home_dir=~
-github_repo_dir=~/github_repo
-tmux_dir=$github_repo_dir/tmux
-# set tmux repository url
-tmux_github_url="https://github.com/gpakosz/.tmux.git"
+# kitty
+kitty_dir="${config_dir}/kitty"
+# hyprland
+hypr_dir="${config_dir}/hypr"
+# fish
+fish_dir="${config_dir}/fish"
+# nvim
+nvim_dir="${config_dir}/nvim"
 
-echo "dot file dir is $dot_file_dir"
-echo "home dir is $home_dir"
-echo "github repository dir is $github_repo_dir"
-echo "tmux dir is $tmux_dir"
+echo "-----------------------------"
+echo "dotfiles dir: ${dot_file_dir}"
+echo "kitty dir: ${kitty_dir}"
+echo "hyprland dir: ${hypr_dir}"
+echo "fish dir: ${fish_dir}"
+echo "nvim dir: ${nvim_dir}"
+echo 
 
-# clean files
-rm -f "$home_dir/.tmux.conf"
-rm -f "$home_dir/.tmux.conf.local"
-rm -f "$home_dir/.vimrc"
-rm -f "$home_dir/.zshrc"
-#rm -f "$home_dir/.yabairc"
-#rm -f "$home_dir/.skhdrc"
+# link kitty config
+if [[ ! -d "${kitty_dir}/custom" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/kitty/custom" "${kitty_dir}/custom"
+  # wrtie some source code
+cat << EOF >> "${kitty_dir}/kitty.conf"
 
-#install .tmux
-[ ! -d "$github_repo_dir" ] && mkdir -p $github_repo_dir && git clone "$tmux_github_url" "$tmux_dir"
-[ ! -d "$config_dir" ] && mkdir -p $config_dir/coc
+include ~/.config/kitty/custom/kitty.conf
+EOF
+else
+  echo "${kitty_dir}/custom is exist!"
+fi
 
-# 创建链接
-ln -s -f $tmux_dir/.tmux.conf $home_dir/.tmux.conf
-#ln -s -f $dot_file_dir/.vimrc $home_dir/.vimrc
-ln -s -f $dot_file_dir/zsh/.zshrc $home_dir/.zshrc
-ln -s -f $dot_file_dir/ranger $config_dir/ranger
-#ln -s -f $dot_file_dir/coc/coc-settings.json $config_dir/nvim/coc-settings.json
-#ln -s -f $dot_file_dir/nvim $config_dir/
-ln -s -f $dot_file_dir/lazygit/config.yml $config_dir/lazygit/config.yml
+# link hyprland config
+if [[ ! -d "${hypr_dir}/custom" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/hypr/custom" "${hypr_dir}/custom"
+else
+  echo "${hypr_dir}/custom is exist!"
+fi
 
-# yabai只有在mac下使用 todo 考虑根据系统 单独做一些事情吧
-#ln -s -f $dot_file_dir/yabai/.yabairc $home_dir
-#ln -s -f $dot_file_dir/yabai/.skhdrc $home_dir
+# link fish config
+if [[ ! -d "${fish_dir}/custom" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/fish/custom" "${fish_dir}/custom"
+  # wrtie some source code
+cat << EOF >> "${fish_dir}/config.fish"
 
-# 复制local配置到home
-cp -f $tmux_dir/.tmux.conf.local $home_dir/
-# 使用自己的conf
-echo "source-file ${dot_file_dir}/tmux/tmux.conf.myself" >> $home_dir/.tmux.conf.local
+source ~/.config/fish/custom/alias.fish
+source ~/.config/fish/custom/export.fish
+EOF
+else
+  echo "${fish_dir}/custom is exist!"
+fi
+
+# link nvchad config
+if [[ ! -d "${nvim_dir}/lua" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/nvchad/lua" "${nvim_dir}/lua"
+else
+  echo "${nvim_dir}/lua is exist!"
+fi
+
+if [[ ! -d "${nvim_dir}/after" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/nvchad/after" "${nvim_dir}/after"
+else
+  echo "${nvim_dir}/after is exist!"
+fi
+
+if [[ ! -d "${nvim_dir}/my_snippets" ]]; then
+  ln -sf --no-target-directory "${dot_file_dir}/nvchad/my_snippets" "${nvim_dir}/my_snippets"
+else
+  echo "${nvim_dir}/my_snippets is exist!"
+fi
