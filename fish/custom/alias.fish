@@ -14,3 +14,4 @@ abbr cp 'cp -v'
 abbr ll 'll -a'
 
 abbr cc 'clear'
+abbr trans 'trans :zh-CN -d'
