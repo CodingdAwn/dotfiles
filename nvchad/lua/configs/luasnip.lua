@@ -36,7 +36,7 @@ ls.add_snippets("cpp", {
          * File    : {}
          * Author  : dAwn_
          * Date    : {}
-         * Purposes: {}-{}
+         * Purposes: {}-{}-{}
          * {}
         */
 
@@ -45,8 +45,9 @@ ls.add_snippets("cpp", {
         f(get_filename), -- 对应 TM_FILENAME
         f(get_date),     -- 对应日期变量，完美解决不生效问题
         i(1, "问题编号"),
-        i(2, "问题名称"),
-        i(3, "https://leetcode-cn.com/problems/"),
+        i(2, "问题难度"),
+        i(3, "问题名称"),
+        i(4, "https://leetcode-cn.com/problems/"),
         i(0) -- 光标最后停留的位置
     }))
 })
