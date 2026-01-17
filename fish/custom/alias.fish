@@ -15,3 +15,4 @@ abbr ll 'll -a'
 
 abbr cc 'clear'
 abbr trans 'trans :zh-CN -d'
+abbr sp 'espeak &> /dev/null'
