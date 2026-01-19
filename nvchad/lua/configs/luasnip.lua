@@ -11,6 +11,7 @@ loader.lazy_load({
 -- 直接在这里定义snip是因为date，
 -- 上面的方式是定义json，使用一些默认函数，但是最终生成的date有问题
 -- 这里直接调用lua更准确方便
+-- FIX 这个也不需要了，现在leetcode工程中用脚本直接一块生成了
 local ls = require("luasnip")
 local s = ls.snippet
 local i = ls.insert_node
