@@ -11,6 +11,9 @@ hypr_dir="${config_dir}/hypr"
 fish_dir="${config_dir}/fish"
 # nvim
 nvim_dir="${config_dir}/nvim"
+# !TODO
+# mpd
+# qutebrowser
 
 echo "-----------------------------"
 echo "dotfiles dir: ${dot_file_dir}"
