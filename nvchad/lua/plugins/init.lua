@@ -61,21 +61,6 @@ return {
     end,
   },
 
-  -- snip
-  {
-    "L3MON4D3/LuaSnip",
-    -- follow latest release.
-    version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    dependencies = { "rafamadriz/friendly-snippets" },
-    config = function()
-      --require("luasnip.loaders.from_vscode").lazy_load({ paths = "~/.config/nvim/my_snippets" })
-      --require("luasnip.loaders.from_vscode").lazy_load()
-      require "configs.luasnip"
-    end,
-    -- install jsregexp (optional!).
-    build = "make install_jsregexp"
-  },
-
   {
     'mikesmithgh/kitty-scrollback.nvim',
     enabled = true,
@@ -90,7 +75,7 @@ return {
   },
 
   {
-    "CodingdAwn/leetcode.nvim",
+    "kawre/leetcode.nvim",
     -- build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
     dependencies = {
       -- include a picker of your choice, see picker section for more details
