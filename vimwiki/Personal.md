@@ -15,8 +15,7 @@
 2. [ ] qutebrowser: how to temporary disable darkmode in current page
 3. [ ] qutebrowser: 不能使用蓝牙耳机
 4. [X] cauldron, orb of creation这两个Idle game都不错。。
-5. [ ] 看一下leetcode.nvim这个插件，学习一下
-6. [ ] leetcode添加cpp lsp支持，因为使用的clangd需要用cmakelist,看看怎么加一下这个功能
+5. [X] 看一下leetcode.nvim这个插件，学习一下
 
 # 坚持要做的事情
 1. english
