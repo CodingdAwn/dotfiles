@@ -7,6 +7,7 @@ nomap("n", "<leader>h")
 nomap("n", "<leader>b")
 nomap("n", "<leader>fm")
 nomap("n", "<leader>e")
+nomap("n", "<C-n>")
 
 nomap("t", "<A-h>")
 nomap("t", "<A-v>")
@@ -101,3 +102,11 @@ map("n", "<leader>bh", function()
 end, { desc = "Close other buffers" })
 
 map("n", "<leader>bn", "<cmd> enew <CR>", { desc = "Close other buffers" })
+
+-- copy message to system clipborad
+vim.keymap.set('n', '<leader>ym', ':redir @+ | silent messages | redir END<CR>', {
+    desc = 'Copy messages to clipboard',
+    silent = true,  -- 不显示命令
+})
+
+vim.keymap.set('n', '<leader>yM', ':CopyMessagesToFile<CR>', { desc = 'Save messages to file' })
