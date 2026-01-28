@@ -1,0 +1,6 @@
+! 设置 DPI 缩放 (根据你的屏幕调整，通常是 96, 120, 144)
+Xft.dpi: 120
+
+! 设置鼠标指针主题
+Xcursor.theme: Adwaita
+Xcursor.size: 24

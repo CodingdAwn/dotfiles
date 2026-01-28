@@ -25,6 +25,3 @@ done &
 dwmblocks &
 ## music player
 rmpc &
-
-## oh my dwm
-exec dwm

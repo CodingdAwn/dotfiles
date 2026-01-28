@@ -16,8 +16,8 @@
 3. [ ] qutebrowser: 不能使用蓝牙耳机
 4. [X] cauldron, orb of creation这两个Idle game都不错。。
 5. [X] 看一下leetcode.nvim这个插件，学习一下
-6. [ ] dwm
-7. [ ] 把家庭照片copy过来
+6. [X] dwm
+7. [X] 把家庭照片copy过来
 
 # 坚持要做的事情
 1. english
