@@ -62,19 +62,6 @@ return {
   },
 
   {
-    'mikesmithgh/kitty-scrollback.nvim',
-    enabled = true,
-    lazy = true,
-    cmd = { 'KittyScrollbackGenerateKittens', 'KittyScrollbackCheckHealth', 'KittyScrollbackGenerateCommandLineEditing' },
-    event = { 'User KittyScrollbackLaunch' },
-    -- version = '*', -- latest stable version, may have breaking changes if major version changed
-    -- version = '^6.0.0', -- pin major version, include fixes and features that do not have breaking changes
-    config = function()
-      require('kitty-scrollback').setup()
-    end,
-  },
-
-  {
     "kawre/leetcode.nvim",
     -- build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
     dependencies = {
@@ -96,10 +83,6 @@ return {
         cache = "~/cache",
       },
 
-      plugins = {
-        non_standalone = false,
-      },
-
       logging = true,
       injector = {
         ["cpp"] = {
@@ -117,47 +100,6 @@ return {
       editor = {
         reset_previous_code = true,
         fold_imports = true,
-      },
-
-      console = {
-        open_on_runcode = true,
-        dir = "row",
-        size = {
-          width = "90%",
-          height = "75%",
-        },
-
-        result = {
-          size = "60%",
-        },
-
-        testcase = {
-          virt_text = true,
-          size = "40%",
-        },
-      },
-
-      description = {
-        position = "left",
-        width = "40%",
-        show_stats = true,
-      },
-
-      picker = { provider = nil },
-      hooks = {
-        ["enter"] = {},
-        ["question_enter"] = {},
-        ["leave"] = {},
-      },
-
-      keys = {
-        toggle = { "q" },
-        confirm = { "<CR>" },
-
-        reset_testcases = "r",
-        use_testcase = "U",
-        focus_testcases = "H",
-        focus_result = "L",
       },
 
       theme = {},
