@@ -13,6 +13,14 @@
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
+# Turn on Qt HighDPI scaling. This is equivalent to setting
+# QT_ENABLE_HIGHDPI_SCALING=1 (Qt >= 5.14) in the environment. It's off
+# by default as it can cause issues with some bitmap fonts. As an
+# alternative to this, it's possible to set font sizes and the
+# `zoom.default` setting.
+# Type: Bool
+c.qt.highdpi = True
+
 # Always restore open sites when qutebrowser is reopened. Without this
 # option set, `:wq` (`:quit --save`) needs to be used to save open tabs
 # (and restore them), while quitting qutebrowser in any other way will
