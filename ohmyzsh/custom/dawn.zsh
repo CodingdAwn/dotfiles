@@ -31,7 +31,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cp="cp -v"
 alias mv="mv -v"
-alias ll="ll -hl"
+alias ll="ls -ahl"
 alias ra="ranger"
 alias trans="trans :zh-CN -d"
 

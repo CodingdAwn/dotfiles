@@ -10,7 +10,7 @@ clash-verge &
 
 # 随机桌面
 while true; do
-    feh --bg-fill --recursive --randomize ~/Pictures/
+    feh --bg-max --recursive --randomize ~/Pictures/family ~/Pictures/Wallpaper-Bank/wallpapers/
     sleep 300
 done &
 
