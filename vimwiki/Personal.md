@@ -21,6 +21,7 @@
 2. open source
 
 # 学习视频
+线性代数，微积分学习路线 
 
 ## 可以浏览一下以下数学的youtube视频，从简单易懂的开始慢慢学
 * 数学 3Blue1Brown  **3blue1brown linear algebra**,  **3blue1brown calculus**
@@ -28,6 +29,7 @@
 * 算法 Back To Back SWE
 * 数学 TheTrevTutor **TheTrevTutor Discrete Math**
 * 数学 Computerphile
+* MIT 18.06 线代  18.01微积分
 
 # 想要学的东西
 1. leetcode
