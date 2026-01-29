@@ -20,6 +20,15 @@
 1. english
 2. open source
 
+# 学习视频
+
+## 可以浏览一下以下数学的youtube视频，从简单易懂的开始慢慢学
+* 数学 3Blue1Brown  **3blue1brown linear algebra**,  **3blue1brown calculus**
+* 数学 Khan Academy (可汗学院)  **Khan Academy Algebra logarithms**, **Khan Academy algorithm complexity**
+* 算法 Back To Back SWE
+* 数学 TheTrevTutor **TheTrevTutor Discrete Math**
+* 数学 Computerphile
+
 # 想要学的东西
 1. leetcode
 2. linux core
