@@ -34,6 +34,7 @@ alias mv="mv -v"
 alias ll="ls -ahl"
 alias ra="ranger"
 alias trans="trans :zh-CN -d"
+alias eza="eza --long --header"
 
 # function
 say() {
