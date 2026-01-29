@@ -11,13 +11,10 @@
 怎样才能对团队做出贡献 提高自己的价值
 
 # 近期要做的事情
-1. [X] (use kitty-scrollback.nvim) copy text use shortcut in terminal or commandline
-2. [ ] qutebrowser: how to temporary disable darkmode in current page
-3. [ ] qutebrowser: 不能使用蓝牙耳机
-4. [X] cauldron, orb of creation这两个Idle game都不错。。
-5. [X] 看一下leetcode.nvim这个插件，学习一下
-6. [X] dwm
-7. [X] 把家庭照片copy过来
+1. [ ] qutebrowser: how to temporary disable darkmode in current page
+2. [ ] qutebrowser: 不能使用蓝牙耳机
+3. [ ] dmenu
+4. [ ] dwmblocks优化，现在显示的不太好
 
 # 坚持要做的事情
 1. english
