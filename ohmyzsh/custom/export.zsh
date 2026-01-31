@@ -1,3 +1,3 @@
 #export
 export EDITOR='nvim'
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="bat -l man -p"
