@@ -1,0 +1,11 @@
+# alias
+alias v="nvim"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias cp="cp -v"
+alias mv="mv -v"
+alias ll="ls -ahl"
+alias ra="ranger"
+alias trans="trans :zh-CN -d"
+alias eza="eza --long --header"

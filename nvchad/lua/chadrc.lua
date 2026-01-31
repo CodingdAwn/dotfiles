@@ -31,4 +31,16 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
+-- TODO 放到config中去
+require("nvim-tree").setup({
+  renderer = {
+    symlink_destination = true, -- 是否显示软链接指向的真实路径
+  },
+  -- 3. 行为逻辑配置
+  update_focused_file = {
+    enable = true,
+    update_root = false, -- 如果设为 true，跳进软链接时可能会导致根目录切换，建议设为 false
+  },
+})
+
 return M

@@ -15,6 +15,7 @@
 2. [ ] qutebrowser: 不能使用蓝牙耳机
 3. [ ] dmenu
 4. [ ] dwmblocks优化，现在显示的不太好
+5. [ ] linux真的可以自定义的很棒，一定要持续学习别人的做法
 
 # 坚持要做的事情
 1. english
@@ -33,7 +34,7 @@
 
 # 想要学的东西
 1. leetcode
-2. linux core
+2. linux core 找几个自己感兴趣的模块，网络，驱动，显示
 3. c++的基础有些差
 4. 网络相关
 5. godot
