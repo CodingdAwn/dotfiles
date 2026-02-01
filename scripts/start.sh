@@ -15,9 +15,6 @@ while true; do
 done &
 
 # 其他应用
-## 状态栏
 dwmblocks &
-
 dunst &
-## music player
-#rmpc &
+xss-lock -- slock &
