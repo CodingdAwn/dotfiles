@@ -21,6 +21,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
+export PATH="$HOME/dotfiles/scripts/bin:$PATH"
 # export in ./export.zsh
 
 # alias in ./alias.zsh
