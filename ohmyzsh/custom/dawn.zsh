@@ -21,26 +21,8 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# export
-export EDITOR='nvim'
+# export in ./export.zsh
 
-# alais
-alias v="nvim"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias cp="cp -v"
-alias mv="mv -v"
-alias ll="ls -ahl"
-alias ra="ranger"
-alias trans="trans :zh-CN -d"
-alias eza="eza --long --header"
+# alias in ./alias.zsh
 
-# function
-say() {
-    echo "$*" | \
-        python -m piper \
-        --model ~/.local/share/piper/models/en_US-amy-medium.onnx \
-        --output-raw | \
-        aplay -r 22050 -f S16_LE -t raw - 2>/dev/null
-}
+# function in ./func.zsh

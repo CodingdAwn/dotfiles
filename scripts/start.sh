@@ -15,7 +15,9 @@ while true; do
 done &
 
 # 其他应用
-## 状态栏
 dwmblocks &
-## music player
-#rmpc &
+dunst &
+xss-lock -- slock &
+
+# mpc监听切歌事件
+mpc_listener.sh &

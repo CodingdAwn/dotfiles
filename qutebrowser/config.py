@@ -10,8 +10,36 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
+
+# Gruvbox Dark 核心配色
+#bg0_hard = "#1d2021"
+#fg0      = "#fbf1c7"
+#gray     = "#928374"
+#red      = "#fb4934"
+#green    = "#b8bb26"
+#yellow   = "#fabd2f"
+#blue     = "#83a598"
+#purple   = "#d3869b"
+#aqua     = "#8ec07c"
+#
+## 应用到 UI
+#c.colors.statusbar.normal.bg = bg0_hard
+#c.colors.statusbar.normal.fg = fg0
+#c.colors.statusbar.insert.bg = aqua
+#c.colors.statusbar.insert.fg = bg0_hard
+## 修复后的 Gruvbox 补全栏背景配置
+#c.colors.completion.category.bg = "#1d2021"    # 分类标题背景
+#c.colors.completion.even.bg = "#282828"        # 偶数行背景
+#c.colors.completion.odd.bg = "#1d2021"         # 奇数行背景
+#c.colors.completion.item.selected.bg = "#fabd2f" # 选中项背景
+#c.colors.completion.item.selected.fg = "#1d2021" # 选中项文字颜色
+#c.colors.completion.fg = fg0
+#c.colors.completion.match.fg = yellow
+#c.colors.tabs.even.bg = bg0_hard
+#c.colors.tabs.odd.bg = "#282828"
 
 # Turn on Qt HighDPI scaling. This is equivalent to setting
 # QT_ENABLE_HIGHDPI_SCALING=1 (Qt >= 5.14) in the environment. It's off
@@ -175,6 +203,11 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # Type: Bool
 c.colors.webpage.darkmode.enabled = True
 
+#c.colors.webpage.darkmode.algorithm = 'lightness-hsl'
+c.colors.webpage.darkmode.policy.images = 'smart'
+
+c.zoom.default = "125%"
+
 # Which pages to apply dark mode to. The underlying Chromium setting has
 # been removed in QtWebEngine 5.15.3, thus this setting is ignored
 # there. Instead, every element is now classified individually.
@@ -198,3 +231,8 @@ c.fonts.web.size.default = 18
 # Default font size (in pixels) for fixed-pitch text.
 # Type: Int
 c.fonts.web.size.default_fixed = 15
+
+c.content.canvas_reading = True
+
+#c.content.user_stylesheets = ['~/.config/qutebrowser/css/gruvbox.css']
+

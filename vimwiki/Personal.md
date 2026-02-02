@@ -11,14 +11,14 @@
 怎样才能对团队做出贡献 提高自己的价值
 
 # 近期要做的事情
-1. [ ] qutebrowser: how to temporary disable darkmode in current page
-2. [ ] qutebrowser: 不能使用蓝牙耳机
-3. [ ] dmenu
-4. [ ] dwmblocks优化，现在显示的不太好
+1. [ ] qutebrowser: 不能使用蓝牙耳机
+2. [ ] dmenu
+3. [ ] 选中的单词，翻译 类似bread的做法可能是用的dmenu
 
 # 坚持要做的事情
 1. english
 2. open source
+3. linux真的可以自定义的很棒，一定要持续学习别人的做法
 
 # 学习视频
 线性代数，微积分学习路线 
@@ -33,7 +33,7 @@
 
 # 想要学的东西
 1. leetcode
-2. linux core
+2. linux core 找几个自己感兴趣的模块，网络，驱动，显示
 3. c++的基础有些差
 4. 网络相关
 5. godot
