@@ -18,3 +18,6 @@ done &
 dwmblocks &
 dunst &
 xss-lock -- slock &
+
+# mpc监听切歌事件
+mpc_listener.sh &

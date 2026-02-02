@@ -11,11 +11,9 @@
 怎样才能对团队做出贡献 提高自己的价值
 
 # 近期要做的事情
-1. [X] qutebrowser: how to temporary disable darkmode in current page
-2. [ ] qutebrowser: 不能使用蓝牙耳机
-3. [ ] dmenu
-4. [X] dwmblocks优化，现在显示的不太好
-5. [ ] 选中的单词，翻译 类似bread的做法可能是用的dmenu
+1. [ ] qutebrowser: 不能使用蓝牙耳机
+2. [ ] dmenu
+3. [ ] 选中的单词，翻译 类似bread的做法可能是用的dmenu
 
 # 坚持要做的事情
 1. english
