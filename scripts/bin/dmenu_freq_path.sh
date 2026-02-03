@@ -20,16 +20,17 @@ choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p "Choose a config to o
 if [ -n "$choice" ]; then
     case "$choice" in
         "dwm")
-            alacritty -e nvim "$HOME/open_source/dwm/config.h"
+            alacritty -e zsh -c "cd $HOME/open_source/dwm ; nvim '$HOME/open_source/dwm/config.h' ; zsh"
             ;;
         "neovim")
-            alacritty -e nvim "$HOME/.config/nvim/init.lua"
+            alacritty -e zsh -c "cd $HOME/.config/nvim ; nvim '$HOME/.config/nvim/init.lua' ; zsh"
             ;;
         "zsh")
-            alacritty -e nvim "$HOME/.oh-my-zsh/custom/dawn.zsh"
+            alacritty -e zsh -c "cd $HOME/.oh-my-zsh/custom ; nvim '$HOME/.oh-my-zsh/custom/dawn.zsh' ; zsh"
             ;;
         "todo")
-            alacritty -e nvim "$HOME/dotfiles/vimwiki/Personal.md"
+            # use + or use -c flag
+            alacritty -e zsh -c "nvim '+lua require(\"lazy\").load({plugins={\"vimwiki\"}})' '+VimwikiIndex' ; zsh"
             ;;
         "dotfiles")
             alacritty -e sh -c "cd '$HOME/dotfiles'; exec zsh"
