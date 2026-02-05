@@ -10,7 +10,7 @@ clash-verge &
 
 # 随机桌面
 while true; do
-    feh --bg-max --recursive --randomize ~/Pictures/waooo/ ~/Pictures/Wallpaper-Bank/wallpapers/
+    feh --bg-max --recursive --randomize ~/Pictures/feh_wallpapers/
     sleep 600
 done &
 
