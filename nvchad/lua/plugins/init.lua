@@ -25,7 +25,7 @@ return {
       { "<leader>ww", "<cmd>VimwikiIndex<cr>", mode = "n", desc = "vim wiki" },
     },
     init = function()
-      vim.cmd("let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
+      vim.cmd("let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]")
       vim.cmd("let g:vimwiki_global_ext = 0")
     end,
     config = function()
