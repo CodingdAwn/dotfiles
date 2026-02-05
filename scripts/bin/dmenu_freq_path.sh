@@ -11,10 +11,11 @@ declare -a options=(
 "zsh"
 "dotfiles"
 "todo"
+"bin"
 )
 
 # Use dmenu to choose from the options
-choice=$(printf '%s\n' "${options[@]}" | dmenu -i -l 20 -p "Choose a config to open:")
+choice=$(printf '%s\n' "${options[@]}" | dmenu -c -i -l 20 -p "Choose a config to open:")
 
 # Check if a choice was made
 if [ -n "$choice" ]; then
@@ -26,7 +27,7 @@ if [ -n "$choice" ]; then
             alacritty -e zsh -c "cd $HOME/.config/nvim ; nvim '$HOME/.config/nvim/init.lua' ; zsh"
             ;;
         "zsh")
-            alacritty -e zsh -c "cd $HOME/.oh-my-zsh/custom ; nvim '$HOME/.oh-my-zsh/custom/dawn.zsh' ; zsh"
+            alacritty -e zsh -c "cd $HOME/dotfiles ; nvim '$HOME/dotfiles/ohmyzsh/custom/dawn.zsh' ; zsh"
             ;;
         "todo")
             # use + or use -c flag
@@ -34,6 +35,9 @@ if [ -n "$choice" ]; then
             ;;
         "dotfiles")
             alacritty -e sh -c "cd '$HOME/dotfiles'; exec zsh"
+            ;;
+        "bin")
+            alacritty -e sh -c "cd '$HOME/dotfiles/scripts/bin/'; exec zsh"
             ;;
     esac
 fi
