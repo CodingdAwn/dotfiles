@@ -8,4 +8,5 @@ case "$1" in
 esac 
 
 # 通知dwmblocks
-pkill -RTMIN+10 dwmblocks
+# 不应该通知了，因为又做了一个mpc_listener.sh来监视切歌
+#pkill -RTMIN+10 dwmblocks
