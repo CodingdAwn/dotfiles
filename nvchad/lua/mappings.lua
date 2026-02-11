@@ -104,8 +104,8 @@ end, { desc = "Close other buffers" })
 map("n", "<leader>bn", "<cmd> enew <CR>", { desc = "Close other buffers" })
 
 -- vimwiki
-map("n", "<leader>wp", "<cmd>VimwikiDiaryPrevDay<CR>", { desc = "vimwiki diary prev day" })
-map("n", "<leader>wn", "<cmd>VimwikiDiaryNextDay<CR>", { desc = "vimwiki diary next day" })
+map("n", "<leader>wk", "<cmd>VimwikiDiaryPrevDay<CR>", { desc = "vimwiki diary prev day" })
+map("n", "<leader>wj", "<cmd>VimwikiDiaryNextDay<CR>", { desc = "vimwiki diary next day" })
 
 -- copy message to system clipborad
 vim.keymap.set('n', '<leader>ym', ':redir @+ | silent messages | redir END<CR>', {
