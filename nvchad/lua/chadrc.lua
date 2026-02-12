@@ -41,6 +41,12 @@ require("nvim-tree").setup({
     enable = true,
     update_root = false, -- 如果设为 true，跳进软链接时可能会导致根目录切换，建议设为 false
   },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+      resize_window = true,
+    },
+  },
 })
 
 return M
