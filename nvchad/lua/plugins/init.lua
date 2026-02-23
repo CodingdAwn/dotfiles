@@ -25,7 +25,8 @@ return {
       { "<leader>ww", "<cmd>VimwikiIndex<cr>", mode = "n", desc = "vim wiki" },
     },
     init = function()
-      vim.cmd("let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]")
+      vim.cmd(
+      "let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]")
       vim.cmd("let g:vimwiki_global_ext = 0")
     end,
     config = function()
@@ -73,7 +74,7 @@ return {
     opts = {
       arg = "leetcode.nvim",
       lang = "cpp",
-      cn = {   -- leetcode.cn
+      cn = { -- leetcode.cn
         enabled = false,
         translator = false,
         translate_problems = false,
@@ -105,8 +106,7 @@ return {
       theme = {},
       image_support = false,
     },
-  }
-
+  },
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
