@@ -11,6 +11,7 @@ alias ll="eza --long --header"
 alias ra="ranger"
 alias trans="trans :zh-CN -d"
 alias eza="eza --long --header"
+alias img="nsxiv"
 
 # fzf related
 alias fzf="fzf --height 50% --layout reverse --border"
