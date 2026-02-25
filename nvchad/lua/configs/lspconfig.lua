@@ -53,5 +53,38 @@ vim.lsp.config('neocmake', {
   }
 })
 
-local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright" }
+local util = require 'lspconfig.util'
+vim.lsp.config('omnisharp', {
+  root_dir = function(bufnr, on_dir)
+    local fname = vim.api.nvim_buf_get_name(bufnr)
+    on_dir(
+      util.root_pattern '*.slnx' (fname)
+      or util.root_pattern '*.sln' (fname)
+      or util.root_pattern '*.csproj' (fname)
+      or util.root_pattern 'omnisharp.json' (fname)
+      or util.root_pattern 'function.json' (fname)
+    )
+  end,
+  -- 启用 Roslyn 引擎
+  enable_roslyn_analyzers = true,
+  settings = {
+    RoslynExtensionsOptions = {
+      -- 必须开启，否则无法跳转到 Godot 内部 API 源码
+      EnableDecompilationSupport = true,
+      -- 必须开启，否则无法识别 Godot 的 Source Generators (信号、节点引用等)
+      EnableAnalyzersSupport = true,
+      -- 开启导入补全
+      EnableImportCompletion = true,
+    },
+    MsBuild = {
+      -- 确保能找到项目文件
+      LoadProjectsOnDemand = false,
+    },
+    Sdk = {
+      IncludePrereleases = true,
+    },
+  },
+})
+
+local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright", "omnisharp" }
 vim.lsp.enable(servers)
