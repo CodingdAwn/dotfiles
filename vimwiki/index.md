@@ -11,6 +11,7 @@
 
 == 一些游戏想法
 [[GameIdea]](GameIdea)
+[[DevLog]](DevLog)
 
 == 工作中的记录 ==
 [[Work]] -- 文脉
