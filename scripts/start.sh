@@ -17,6 +17,8 @@ done &
 # 其他应用
 dwmblocks &
 dunst &
+xset s 6000 6000
+xset dpms 0 0 6000
 xss-lock -- slock &
 
 # mpc监听切歌事件
