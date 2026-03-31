@@ -25,7 +25,7 @@ map("n", "<leader>tp", function()
 end, { desc = "toggle transparency" })
 
 map("n", "<leader>fm", function()
-  vim.lsp.buf.format { async = true }
+  require("conform").format { async = true, lsp_fallback = true }
 end, { desc = "format file" })
 
 map("n", "<leader>e", function()
