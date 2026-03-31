@@ -26,7 +26,7 @@ return {
     },
     init = function()
       vim.cmd(
-      "let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]")
+        "let g:vimwiki_list = [{'path': '~/dotfiles/vimwiki/', 'auto_diary_index': 1, 'syntax': 'markdown', 'ext': '.md'}]")
       vim.cmd("let g:vimwiki_global_ext = 0")
     end,
     config = function()
@@ -107,6 +107,18 @@ return {
       image_support = false,
     },
   },
+
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies =
+    {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio"
+    },
+    config = function()
+      require "configs.dap"
+    end
+  }
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 

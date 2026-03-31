@@ -86,5 +86,5 @@ vim.lsp.config('omnisharp', {
   },
 })
 
-local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright", "omnisharp" }
+local servers = { "html", "cssls", "lua_ls", "clangd", "vtsls", "pyright", "neocmake", "basedpyright", "omnisharp", "gdscript" }
 vim.lsp.enable(servers)
